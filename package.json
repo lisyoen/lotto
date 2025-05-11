@@ -6,17 +6,25 @@
   "scripts": {
     "tree": "tree -I 'node_modules|dist|*.log|*.local|.vscode|.idea|.DS_Store|*.suo|*.ntvs*|*.njsproj|*.sln|*.sw?' --prune > tree.txt",
     "gpt": "cp gpt.txt chat.txt && npm run tree && cat tree.txt >> chat.txt && echo \"\\n\" >> chat.txt && cat README.md >> chat.txt && echo package.json >> chat.txt && cat package.json >> chat.txt",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:pm2": "pm2 start dist/index.js --name lotto-server",
+    "stop:pm2": "pm2 stop lotto-server && pm2 delete lotto-server",
+    "restart": "npm run stop:pm2 && npm run start:pm2",
+    "test:api": "bash test_api.sh",
+    "init:db": "sqlite3 db/lotto.db < db/init_db.sql"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/body-parser": "^1.19.5",
-    "@types/express": "^5.0.1",
     "@types/node": "^22.15.17",
+    "better-sqlite3": "^11.10.0",
     "body-parser": "^2.2.0",
-    "express": "^5.1.0",
+    "express": "^4.18.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
   }
 }

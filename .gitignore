@@ -112,3 +112,6 @@ node_modules/
 
 # Environment variables
 .env
+
+# Exclude all .txt files in all folders
+**/*.txt

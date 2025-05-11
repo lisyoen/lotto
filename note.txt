@@ -1,3 +1,4 @@
+// File Path: /home/lisyoen/git/lotto-server/note.txt
 프로젝트 노트
 로또추천 서비스의 웹클라이언트 프로젝트
 
@@ -21,8 +22,15 @@ https://m.dhlottery.co.kr/qr.do?method=winQr&v=0019a063038394043
 - 로또번호 추천
 
 개발 절차
-1. QRCode 읽기
-2. 사용자 로긴 - 로또추천 서비스의 인증 API 사용
-3. 사용자 로또번호 전송 - 로또추천 서비스의 번호입력 API 사용
-4. 사용자 로또번호 표시 - 로또추천 서비스의 번호조회 API 사용
-5. UI 개선 - 이쁘고 편하게(기획 필요)
+1. 사용자 로긴 - /api/login
+2. 사용자 로또번호 전송 - /api/lotto/send
+3. 사용자 로또번호 표시 - /api/lotto/view
+4. UI 개선 - 이쁘고 편하게(기획 필요)
+
+API 설명
+
+1. QRCode 읽기 - POST `/api/qrcode`
+2. 사용자 로그인 - POST `/api/login`
+3. 사용자 로또번호 전송 - POST `/api/lotto/send`
+4. 사용자 로또번호 표시 - GET `/api/lotto/view`
+5. 사용자 로또번호 페이지 단위 조회 - GET `/api/lotto/view/paged`

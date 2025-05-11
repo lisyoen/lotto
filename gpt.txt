@@ -1,7 +1,19 @@
-아래와 같은 QRCode 리더를 개발중이야.
+// File Path: /home/lisyoen/git/lotto-server/gpt.txt
+아래와 같은 lotto-client 를 개발중이야.
+QRCode 를 읽고 lotto-server 의 API 를 호출하는게 주요 기능임
+
+github 에서 관리중이야.
+https://github.com/lisyoen/lotto-server.git
 
 개발하는 시스템은 이런 구조야. 깃헙 이슈 내용을 확인해.
 https://github.com/lisyoen/training/issues/1
 
+<< 여기에 요구사항 작성 >>
 
 추가로 필요한 파일은 알려주면 전달할께.
+
+[중요] 파일을 수정할 땐 전체 파일을 보여줘.
+파일을 열어야 할 땐 code 로 여는 명령어부터 줘.
+
+한 단계씩 차근차근 진행하고, 진행 결과가 맞는지 확인할 수 있는 명령어도 알려줘.
+확인 결과를 보여주면 그걸로 니가 판단해줘.
