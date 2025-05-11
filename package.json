@@ -1,5 +1,5 @@
 {
-  "name": "lotto",
+  "name": "lotto-server",
   "version": "1.0.0",
   "description": "로또번호 관리/추천 서비스",
   "main": "index.js",

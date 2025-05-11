@@ -2,8 +2,8 @@
 로또추천 서비스의 웹클라이언트 프로젝트
 
 로또추천 서비스 구성
-1. 웹클라이언트 (이 프로젝트)
-2. 서버
+1. 웹클라이언트
+2. 서버 (이 프로젝트)
 
 https 가 필수라 github page 로 배포함
 https://lisyoen.github.io/qrscanner/QRS.html
