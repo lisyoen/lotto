@@ -115,3 +115,6 @@ node_modules/
 
 # Exclude all .txt files in all folders
 **/*.txt
+
+# DB 파일 제외
+/db/lotto.db

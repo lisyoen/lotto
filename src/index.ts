@@ -64,6 +64,15 @@ app.get('/api/lotto/view/paged', (req: Request, res: Response) => {
   });
 });
 
+// 테스트 데이터 삭제 API (테스트용 계정의 로또번호 삭제)
+app.delete('/api/lotto/test/cleanup', (req: Request, res: Response) => {
+  // 테스트에서 사용한 고정 데이터만 삭제 (round=1, 번호 1~6, user_id=1)
+  const info = db.prepare(
+    'DELETE FROM lotto_numbers WHERE user_id = ? AND round = ? AND number1 = 1 AND number2 = 2 AND number3 = 3 AND number4 = 4 AND number5 = 5 AND number6 = 6'
+  ).run(1, 1);
+  res.send({ message: '테스트 데이터 삭제', deleted: info.changes });
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
